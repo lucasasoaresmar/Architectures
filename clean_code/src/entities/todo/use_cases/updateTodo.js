@@ -12,7 +12,8 @@ module.exports = function buildUpdateTodo({ Database, Time }) {
         
         return Database.update({
             id,
-            ...todo
+            ...todo,
+            modifiedOn: Time.now(),
         })
     }
 }
